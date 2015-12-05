@@ -16,6 +16,7 @@
 		0B22A9791C0D3DEF002A073A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B22A9771C0D3DEF002A073A /* LaunchScreen.storyboard */; };
 		0B22A9841C0D3DEF002A073A /* Fruit_NinjaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22A9831C0D3DEF002A073A /* Fruit_NinjaTests.swift */; };
 		0B22A98F1C0D3DEF002A073A /* Fruit_NinjaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22A98E1C0D3DEF002A073A /* Fruit_NinjaUITests.swift */; };
+		0B81021F1C13118000E66955 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B81021E1C13118000E66955 /* CameraViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0B22A98A1C0D3DEF002A073A /* Fruit-NinjaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fruit-NinjaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B22A98E1C0D3DEF002A073A /* Fruit_NinjaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit_NinjaUITests.swift; sourceTree = "<group>"; };
 		0B22A9901C0D3DEF002A073A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B81021E1C13118000E66955 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				0B22A96C1C0D3DEF002A073A /* GameScene.sks */,
 				0B22A96E1C0D3DEF002A073A /* GameScene.swift */,
 				0B22A9701C0D3DEF002A073A /* GameViewController.swift */,
+				0B81021E1C13118000E66955 /* CameraViewController.swift */,
 				0B22A9721C0D3DEF002A073A /* Main.storyboard */,
 				0B22A9751C0D3DEF002A073A /* Assets.xcassets */,
 				0B22A9771C0D3DEF002A073A /* LaunchScreen.storyboard */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B22A96F1C0D3DEF002A073A /* GameScene.swift in Sources */,
+				0B81021F1C13118000E66955 /* CameraViewController.swift in Sources */,
 				0B22A9711C0D3DEF002A073A /* GameViewController.swift in Sources */,
 				0B22A96B1C0D3DEF002A073A /* AppDelegate.swift in Sources */,
 			);
@@ -494,6 +498,7 @@
 				0B22A9951C0D3DEF002A073A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B22A9961C0D3DEF002A073A /* Build configuration list for PBXNativeTarget "Fruit-NinjaTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +507,7 @@
 				0B22A9981C0D3DEF002A073A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B22A9991C0D3DEF002A073A /* Build configuration list for PBXNativeTarget "Fruit-NinjaUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +516,7 @@
 				0B22A99B1C0D3DEF002A073A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

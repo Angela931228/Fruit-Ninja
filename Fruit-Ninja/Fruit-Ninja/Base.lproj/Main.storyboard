@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="MZ5-fZ-zel">
             <objects>
-                <viewController id="pQq-1I-MJT" sceneMemberID="viewController">
+                <viewController id="pQq-1I-MJT" customClass="CameraViewController" customModule="Fruit_Ninja" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7cq-3m-o4q"/>
                         <viewControllerLayoutGuide type="bottom" id="7ZV-DE-ayn"/>
@@ -17,17 +17,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laF-ld-c9R">
-                                <rect key="frame" x="326" y="296" width="38" height="30"/>
+                                <rect key="frame" x="298" y="217" width="32" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="start"/>
                                 <connections>
                                     <segue destination="SGP-Cj-Io9" kind="presentation" id="DVl-zr-z6Y"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCX-Pk-jK5">
+                                <rect key="frame" x="223" y="260" width="197" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Choose from exsiting photos"/>
+                                <connections>
+                                    <action selector="chooseImageFromPhotoLibrary" destination="kF9-fd-uoQ" eventType="touchUpInside" id="NOX-Vd-j7K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFF-QD-dvM">
+                                <rect key="frame" x="261" y="298" width="120" height="30"/>
+                                <animations/>
+                                <state key="normal" title="take from camera"/>
+                                <connections>
+                                    <action selector="chooseImageFromCamera" destination="kF9-fd-uoQ" eventType="touchUpInside" id="ydc-3E-n0e"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="diw-ri-1hx">
+                                <rect key="frame" x="194" y="351" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="diw-ri-1hx" id="qNB-jo-99i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kF9-fd-uoQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
