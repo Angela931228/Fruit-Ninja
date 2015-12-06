@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class CameraViewController: UIViewController,  UIImagePickerControllerDelegate,UINavigationControllerDelegate  {
+import Toucan
+class CameraViewController: UIViewController,  UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class CameraViewController: UIViewController,  UIImagePickerControllerDelegate,U
         let imagePicker = UIImagePickerController()
         if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
             if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
-                imagePicker.allowsEditing = false
+                imagePicker.allowsEditing = true
                 imagePicker.sourceType = .Camera
                 imagePicker.cameraCaptureMode = .Photo
                 presentViewController(imagePicker, animated: true, completion: {})
@@ -50,7 +50,9 @@ class CameraViewController: UIViewController,  UIImagePickerControllerDelegate,U
         
         dismissViewControllerAnimated(true, completion: nil)
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        imageView.image = selectedImage
+        let resizedAndMaskedImage = Toucan(image: selectedImage).maskWithEllipse().image
+        //imageView.image = selectedImage
+        imageView.image = resizedAndMaskedImage
         let imageData = UIImagePNGRepresentation(selectedImage)
         let documentsURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
         let imageURL = documentsURL.URLByAppendingPathComponent("cached.png")
@@ -62,7 +64,6 @@ class CameraViewController: UIViewController,  UIImagePickerControllerDelegate,U
             print("saved")
             NSUserDefaults.standardUserDefaults().setObject(urlString, forKey: "imagePath")
         }
+        
     }
-    
-    
 }

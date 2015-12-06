@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laF-ld-c9R">
-                                <rect key="frame" x="298" y="217" width="32" height="30"/>
+                                <rect key="frame" x="215" y="209" width="32" height="30"/>
                                 <animations/>
                                 <state key="normal" title="start"/>
                                 <connections>
@@ -25,25 +25,30 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCX-Pk-jK5">
-                                <rect key="frame" x="223" y="260" width="197" height="30"/>
+                                <rect key="frame" x="140" y="260" width="197" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Choose from exsiting photos"/>
                                 <connections>
                                     <action selector="chooseImageFromPhotoLibrary" destination="kF9-fd-uoQ" eventType="touchUpInside" id="NOX-Vd-j7K"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="diw-ri-1hx">
+                                <rect key="frame" x="183" y="349" width="111" height="110"/>
+                                <animations/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nu5-NK-g6u" customClass="CropppableImageView">
+                                <rect key="frame" x="128" y="62" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFF-QD-dvM">
-                                <rect key="frame" x="261" y="298" width="120" height="30"/>
+                                <rect key="frame" x="178" y="298" width="120" height="30"/>
                                 <animations/>
                                 <state key="normal" title="take from camera"/>
                                 <connections>
                                     <action selector="chooseImageFromCamera" destination="kF9-fd-uoQ" eventType="touchUpInside" id="ydc-3E-n0e"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="diw-ri-1hx">
-                                <rect key="frame" x="194" y="351" width="240" height="128"/>
-                                <animations/>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
